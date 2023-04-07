@@ -132,7 +132,6 @@ h3 {
     display: flex;
     background-color: #d6d6d6;
     align-items: center;
-    border-radius: 10px;
 }
 
 .pneumonia_bg {
@@ -142,7 +141,6 @@ h3 {
     height: 50px;
     width: 0px;
     background-color: var(--primaryColorDark);
-    border-radius: 10px 0px 0px 10px;
     z-index: 1;
     animation-name: pneumonia_bg_animation;
     animation-fill-mode: forwards;
