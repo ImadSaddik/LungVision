@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <link rel="stylesheet" href="../css/playground.css">
+    <link rel="icon" type="image/svg+xml" href="../imgs/mini_logo.svg">
+</head>
+<body>
+    <div>
+        <nav class="nav_bar">
+            <a href="index.html" class="logo_container">
+                <img src="../imgs/logo_.svg" alt="LOGO" class="logo">
+            </a>
+            <ul>
+                <li><a href="playground.html">Playground</a></li>
+                <li><a href="database.html">Database</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="playground">
+        <div class="upload_div">
+            <img src="../imgs/upload_file_icon.svg" alt="Upload">
+            <h3 id="upload_text_helper">Upload your image</h3>
+            <button id="upload_button">Upload</button>
+        </div>
+        <div class="preview_div">
+            <h1>Preview</h1>
+            <div id="image_preview">
+                <h3 id="image_preview_text">Upload an image to get a preview</h3>
+            </div>
+        </div>
+        <div class="results_div">
+            <h1>Prediction</h1>
+            <div class="model_prediction">
+                <div class="pneumonia_bg" id="pneumonia_bg"></div>
+                <h3 id="pneumonia_label" class="pneumonia_label">Pneumonia = %</h3>
+                <h3 id="normal_label" class="normal_label">Normal = %</h3>
+            </div>
+        </div>
+        <button id="predict_button" class="predict_button">Start prediction</button>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="../scripts/playground.js"></script>
+</body>
+</html>
