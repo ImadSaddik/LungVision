@@ -56,16 +56,18 @@ function predictImage() {
             normalLabel.innerHTML = "Normal: " + normal_value + " %";
             pneumoniaLabel.innerHTML = "Pneumonia: " + pneumonia_value + " %";
             console.log(predictionBackground.style.width);
-            predictionBackground.style.setProperty('--pneumonia-actual-value', predictionBackground.offsetWidth);
-            predictionBackground.style.setProperty('--pneumonia-value', pneumonia_value / 100);
+            predictionBackground.style.width = pneumonia_value * 4 + 'px';
 
-            if (pneumonia_value > 30) {
-                pneumoniaLabel.style.color = "white";
-            } else if (pneumonia_value > 90) {
+            if (pneumonia_value < 33.33) {
+                pneumoniaLabel.style.color = "black";
+                // predictionBackground.style.backgroundColor = "green";
+            } else if (pneumonia_value >= 33.33 && pneumonia_value < 66.66) {
                 normalLabel.style.color = "white";
-            } else if (pneumonia_value < 10) {
+                // predictionBackground.style.backgroundColor = "red";
+            } else if (pneumonia_value >= 66.66) {
                 normalLabel.style.color = "black";
                 pneumoniaLabel.style.color = "black";
+                // predictionBackground.style.backgroundColor = "black";
             }
         });
     }

@@ -1,0 +1,270 @@
+@font-face {
+    font-family: RobotoCondensed;
+    src: url(../fonts/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: RobotoCondensedLight;
+    src: url(../fonts/RobotoCondensed-Light.ttf);
+}
+
+:root {
+    --primaryColorDark: #aa4400;
+    --primaryColorLight: #aa4400bd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: RobotoCondensed;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: RobotoCondensedLight;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.nav_bar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 0 1px 5px 0 #000;
+    padding: 0 10px;
+}
+
+.logo_container {
+    margin-right: auto;
+}
+
+.logo {
+    width: 130px;
+    height: 22px;
+}
+
+.nav_bar ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav_bar ul li {
+    margin: 0 1rem;
+}
+
+.nav_bar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_bar ul li a:hover {
+    color: var(--primaryColorDark);
+}
+
+.table {
+    width: 100%;
+}
+
+.table__header {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    flex-direction: column;
+}
+
+#table__input {
+    width: 150px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    outline: none;
+    box-shadow: none;
+    font-size: 1rem;
+}
+
+#table__input:focus {
+    outline: 1px solid var(--primaryColorLight);
+}
+
+.search_div {
+    display: flex;
+    flex-direction: row;
+}
+
+#search__button {
+    margin-left: 20px;
+    width: 100px;
+    height: 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    overflow: none;
+    border: 1px solid #000;
+    background-color: var(--primaryColorDark);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#search__button:hover {
+    background-color: var(--primaryColorLight);
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f6f9fc;
+    color: #8493a5;
+    font-size: 1rem;
+}
+
+.table__div {
+    overflow-x: auto;
+    max-height: 400px;
+}
+
+th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    word-break: break-all;
+    text-align: center;
+}
+
+td img {
+    height: 48px;
+    width: 48px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+td button {
+    padding: 7px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+}
+
+td button:hover {
+    background-color: #b40000;
+}
+
+tr:hover td {
+    color: #aa4400;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+.add_record {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.form-row input {
+    width: 150px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    outline: none;
+    box-shadow: none;
+    margin: 5px 0px;
+    font-size: 1rem;
+    font-family: RobotoCondensedLight;
+}
+
+.form-row select {
+    width: 160px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    outline: none;
+    box-shadow: none;
+    margin: 5px 0px;
+    font-size: 1rem;
+    font-family: RobotoCondensedLight;
+    background-color: white;
+}
+
+.form-row input:focus {
+    outline: 1px solid var(--primaryColorLight);
+}
+
+.form-row label {
+    font-size: 1.25rem;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+}
+
+.upload_button {
+    height: 30px;
+    width: 160px;
+    outline: none;
+    border: none;
+    background-color: var(--primaryColorDark);
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.upload_button:hover {
+    background-color: var(--primaryColorLight);
+}
+.submit_button {
+    height: 30px;
+    width: 160px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    background-color: var(--primaryColorDark);
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.submit_button:hover {
+    background-color: var(--primaryColorLight);
+}
+
+#preview_image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 5px;
+    border: none;
+    outline: 1px solid var(--primaryColorLight);
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <link rel="stylesheet" href="../css/database.css">
+    <link rel="icon" type="image/svg+xml" href="../imgs/mini_logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div>
+        <nav class="nav_bar">
+            <a href="index.html" class="logo_container">
+                <img src="../imgs/logo_.svg" alt="LOGO" class="logo">
+            </a>
+            <ul>
+                <li><a href="playground.html">Playground</a></li>
+                <li><a href="database.html">Database</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="table">
+        <div class="table__header">
+            <h1>Patient's database</h1>
+            <div class="search_div">
+                <input type="text" placeholder="Search by name" id="table__input">
+                <button id="search__button">Search</button>
+            </div>
+        </div>
+        <div class="table__div">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Full name</th>
+                        <th>Age</th>
+                        <th>Confusion</th>
+                        <th>Urea</th>
+                        <th>Respiratory rate</th>
+                        <th>Blood pressure</th>
+                        <th>Image</th>
+                        <th>Result</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Saddik Imad</td>
+                        <td>22</td>
+                        <td>Confused</td>
+                        <td>1</td>
+                        <td>25</td>
+                        <td>90</td>
+                        <td><img src="../imgs/normal_person.jpeg" alt="image"></td>
+                        <td>Pneumonia</td>
+                        <td><button id="delete_record1"><i class="fa-solid fa-trash"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td>Saddik Imad</td>
+                      <td>22</td>
+                      <td>Confused</td>
+                      <td>1</td>
+                      <td>25</td>
+                      <td>90</td>
+                      <td><img src="../imgs/normal_person.jpeg" alt="image"></td>
+                      <td>Pneumonia</td>
+                      <td><button id="delete_record1"><i class="fa-solid fa-trash"></i></button></td>
+                    </tr> 
+                    <tr>
+                      <td>Saddik Imad</td>
+                      <td>22</td>
+                      <td>Confused</td>
+                      <td>1</td>
+                      <td>25</td>
+                      <td>90</td>
+                      <td><img src="../imgs/normal_person.jpeg" alt="image"></td>
+                      <td>Pneumonia</td>
+                      <td><button id="delete_record1"><i class="fa-solid fa-trash"></i></button></td>
+                    </tr> 
+                    <tr>
+                      <td>Saddik Imad</td>
+                      <td>22</td>
+                      <td>Confused</td>
+                      <td>1</td>
+                      <td>25</td>
+                      <td>90</td>
+                      <td><img src="../imgs/normal_person.jpeg" alt="image"></td>
+                      <td>Pneumonia</td>
+                      <td><button id="delete_record1"><i class="fa-solid fa-trash"></i></button></td>
+                    </tr> 
+                    <tr>
+                      <td>Saddik Imad</td>
+                      <td>22</td>
+                      <td>Confused</td>
+                      <td>1</td>
+                      <td>25</td>
+                      <td>90</td>
+                      <td><img src="../imgs/normal_person.jpeg" alt="image"></td>
+                      <td>Pneumonia</td>
+                      <td><button id="delete_record1"><i class="fa-solid fa-trash"></i></button></td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="add_record">
+        <h1>Add a record</h1>
+        <form action="/record" method="post">
+            <div class="form-row">
+              <div>
+                <label for="input_full_name">Full name</label>
+                <input type="text" id="input_full_name" name="input_full_name" required>
+              </div>
+              <div>
+                <label for="input_age">Age</label>
+                <input type="text" id="input_age" name="input_age" required>
+              </div>
+              <div>
+                <label for="input_confusion">Confusion</label>
+                <select id="input_confusion" name="input_confusion" required>
+                    <option value="">--Please select--</option>
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="input_urea">Urea</label>
+                <input type="text" id="input_urea" name="input_urea" required>
+              </div>
+              <div>
+                <label for="input_respiratory_rate">Respiratory rate</label>
+                <input type="text" id="input_respiratory_rate" name="input_respiratory_rate" required>
+              </div>
+              <div>
+                <label for="input_blood_pressure">Blood pressure</label>
+                <input type="text" id="input_blood_pressure" name="input_blood_pressure" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="input_result">Result</label>
+                <input type="text" id="input_result" name="input_result" required>
+              </div>
+              <div>
+                <label>Image</label>
+                <img src="" id="preview_image" alt="">
+              </div>
+            </div>
+        </form>
+        <button class="upload_button" id="upload_button">Upload image</button>
+        <button class="submit_button" id="submit_button">Add record</button>
+    </div>
+    <script src="../scripts/database.js"></script>
+</body>
+</html>

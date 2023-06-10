@@ -142,18 +142,6 @@ h3 {
     width: 0px;
     background-color: var(--primaryColorDark);
     z-index: 1;
-    animation-name: pneumonia_bg_animation;
-    animation-fill-mode: forwards;
-    animation-duration: 10s;
-}
-
-@keyframes pneumonia_bg_animation {
-    from {
-        width: calc(var(--pneumonia-actual-value) * 1px);
-    }
-    to {
-        width: calc(var(--pneumonia-value) * 400px);
-    }
 }
 
 .pneumonia_label {
